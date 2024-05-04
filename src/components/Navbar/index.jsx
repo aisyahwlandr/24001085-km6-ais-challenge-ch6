@@ -30,13 +30,13 @@ const NavbarComponent = () => {
                         {user ? (
                             <>
                                 {(user?.role === "admin" || user?.role === "superadmin") && (
-                                    <Nav.Link as={Link} to="/profile">
-                                        {user?.name}
+                                    <Nav.Link as={Link} to="/cars">
+                                        Add Car
                                     </Nav.Link>
                                 )}
                                 {(user?.role === "admin" || user?.role === "superadmin") && (
-                                    <Nav.Link as={Link} to="/cars">
-                                        Add Car
+                                    <Nav.Link as={Link} to="/profile">
+                                        {user?.name}
                                     </Nav.Link>
                                 )}
                                 <Nav.Link

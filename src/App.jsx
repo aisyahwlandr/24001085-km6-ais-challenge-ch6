@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import AddCar from "./pages/addCar";
+import UpdateCar from "./pages/updateCar";
 
 import "bootstrap/dist/css/bootstrap.min.css"; // apply bootstrap for styling
 import "react-toastify/dist/ReactToastify.css";
@@ -81,6 +82,17 @@ const router = createBrowserRouter([
                 <Navbar />
                 <Container className="mt-5">
                     <CarDetail />
+                </Container>
+            </Protected>
+        ),
+    },
+    {
+        path: "/cars/update/:id",
+        element: (
+            <Protected>
+                <Navbar />
+                <Container className="mt-5">
+                    <UpdateCar />
                 </Container>
             </Protected>
         ),
