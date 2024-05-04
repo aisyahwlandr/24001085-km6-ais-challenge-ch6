@@ -46,3 +46,39 @@ export const getCar = (navigate, id) => async (dispatch, getState) => {
         navigate("/");
     }
 };
+
+export const addCar =
+    (navigate, name, photo, rentperday, cartype_id, setIsLoading) => async (dispatch, getState) => {
+            const { token } = getState().auth;
+
+            // make loading
+            setIsLoading(true);
+
+            let data = new FormData();
+            data.append('name', name);
+            data.append('photo', photo);
+            data.append('rentperday', rentperday);
+            data.append('cartype_id', cartype_id);
+
+            let config = {
+                method: "post",
+                url: `${import.meta.env.VITE_BACKEND_API}/api/cars`,
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+                data: data,
+            };
+
+            try {
+                const response = await axios.request(config);
+                console.log(JSON.stringify(response.data));
+                toast.success("Car added successfully!");
+                navigate("/");
+            }
+            catch (error) {
+                toast.error(error?.response?.data?.message);
+                // redirect to home
+                navigate("/");
+            }
+            setIsLoading(false);
+        };

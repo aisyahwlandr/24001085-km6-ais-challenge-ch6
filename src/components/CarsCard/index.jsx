@@ -22,9 +22,21 @@ const CarsCard = ({ car }) => {
                     </div>
                 </Card.Body>
                 <Card.Footer>
-                    <Link to={`/cars/${car?.id}`}>
-                        <Button variant="primary">View Details</Button>
-                    </Link>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <Link to={`/cars/${car?.id}`}>
+                                <Button variant="primary">View Details</Button>
+                            </Link>
+                        </div>
+                        <div className="col-md-6">
+                            <Link to={`/cars/${car?.id}`}>
+                                <Button variant="warning">Update</Button>
+                            </Link>
+                            <Link to={`/cars/${car?.id}`}>
+                                <Button variant="danger">Delete</Button>
+                            </Link>
+                        </div>
+                    </div>
                 </Card.Footer>
             </Card>
         </Col>

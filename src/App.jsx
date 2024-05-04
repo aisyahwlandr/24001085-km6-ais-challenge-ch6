@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import AddCar from "./pages/addCar";
 
 import "bootstrap/dist/css/bootstrap.min.css"; // apply bootstrap for styling
 import "react-toastify/dist/ReactToastify.css";
@@ -58,6 +59,17 @@ const router = createBrowserRouter([
                 <Navbar />
                 <Container className="mt-5">
                     <Profile />
+                </Container>
+            </Protected>
+        ),
+    },
+    {
+        path: "/cars",
+        element: (
+            <Protected roles={["admin", "superadmin"]}>
+                <Navbar />
+                <Container className="mt-5">
+                    <AddCar />
                 </Container>
             </Protected>
         ),

@@ -34,6 +34,11 @@ const NavbarComponent = () => {
                                         {user?.name}
                                     </Nav.Link>
                                 )}
+                                {(user?.role === "admin" || user?.role === "superadmin") && (
+                                    <Nav.Link as={Link} to="/cars">
+                                        Add Car
+                                    </Nav.Link>
+                                )}
                                 <Nav.Link
                                     onClick={() => {
                                         dispatch(logout());

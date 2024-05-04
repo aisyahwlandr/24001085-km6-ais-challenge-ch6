@@ -18,7 +18,7 @@ const Profile = () => {
 
     return (
         <Row>
-            <Col md={6} className="offset-md-3">
+            <Col md={6} className="offset-md-3 mb-5">
                 <Card>
                     <Card.Header>{car?.name}</Card.Header>
                     <Card.Body>
