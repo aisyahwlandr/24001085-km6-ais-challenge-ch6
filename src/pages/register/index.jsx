@@ -6,9 +6,9 @@ import Card from "react-bootstrap/Card";
 const Register = () => {
     return (
         <Row>
-            <Col md={6} className="offset-md-3">
-                <Card>
-                    <Card.Header>Register</Card.Header>
+            <Col md={6} className="offset-md-3 pb-5">
+                <Card style={{ backgroundColor: "#EEF7FF" }}>
+                    <Card.Header style={{ backgroundColor: "#7AB2B2", color: "#ffffff" }}>Register</Card.Header>
                     <Card.Body>
                         <RegisterComponent />
                     </Card.Body>

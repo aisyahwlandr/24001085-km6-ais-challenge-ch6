@@ -18,9 +18,9 @@ const Profile = () => {
 
     return (
         <Row>
-            <Col md={6} className="offset-md-3 mb-5">
-                <Card>
-                    <Card.Header>{car?.name}</Card.Header>
+            <Col md={6} className="offset-md-3 pb-5">
+                <Card style={{ backgroundColor: "#EEF7FF" }}>
+                    <Card.Header style={{ backgroundColor: "#7AB2B2", color: "#ffffff" }}>{car?.name}</Card.Header>
                     <Card.Body>
                         <Form>
                             {!car ? (

@@ -17,8 +17,8 @@ const CarsCard = ({ car }) => {
 
     return (
         <Col md={4} className="mb-4">
-            <Card>
-                <Card.Header>{car?.name}</Card.Header>
+            <Card style={{ backgroundColor: "#EEF7FF" }}>
+                <Card.Header style={{ backgroundColor: "#7AB2B2", color: "#EEF7FF" }}>{car?.name}</Card.Header>
                 <Card.Body>
                     {car?.photo && (
                         <Image
