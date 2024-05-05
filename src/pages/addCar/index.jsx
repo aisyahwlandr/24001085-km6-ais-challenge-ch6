@@ -7,8 +7,9 @@ const AddCar = () => {
     return (
         <Row>
             <Col md={6} className="offset-md-3">
-                <Card>
-                    <Card.Header>AddCar</Card.Header>
+            <Card style={{ backgroundColor: "#EEF7FF" }}>
+                <Card.Header className="text-center fw-bold h4"
+                style={{ backgroundColor: "#7AB2B2", color: "#EEF7FF" }}>Add Car</Card.Header>
                     <Card.Body>
                         <AddCarComponent />
                     </Card.Body>

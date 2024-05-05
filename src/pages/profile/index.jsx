@@ -16,8 +16,9 @@ const Profile = () => {
     return (
         <Row>
             <Col md={6} className="offset-md-3 pb-5">
-                <Card>
-                    <Card.Header>My Profile</Card.Header>
+            <Card style={{ backgroundColor: "#EEF7FF" }}>
+                <Card.Header className="text-center fw-bold h4"
+                style={{ backgroundColor: "#7AB2B2", color: "#EEF7FF" }}>My Profile</Card.Header>
                     <Card.Body>
                         <Form>
                             {!user ? (
@@ -31,6 +32,7 @@ const Profile = () => {
                                             src={user?.photo}
                                             className="img-fluid"
                                             rounded
+                                            style={{ width: "50%" }}
                                         />
                                     )}
 

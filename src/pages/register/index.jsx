@@ -8,7 +8,8 @@ const Register = () => {
         <Row>
             <Col md={6} className="offset-md-3 pb-5">
                 <Card style={{ backgroundColor: "#EEF7FF" }}>
-                    <Card.Header style={{ backgroundColor: "#7AB2B2", color: "#ffffff" }}>Register</Card.Header>
+                    <Card.Header className="text-center fw-bold h4"
+                    style={{ backgroundColor: "#7AB2B2", color: "#ffffff" }}>Register</Card.Header>
                     <Card.Body>
                         <RegisterComponent />
                     </Card.Body>

@@ -21,7 +21,8 @@ const NavbarComponent = () => {
                 <Navbar.Brand as={Link} to="/" style={{ color: "#EEF7FF" }}>
                     Kampus Merdeka
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" 
+                style={{ backgroundColor: "#EEF7FF", borderColor: "#EEF7FF" }} />
                 <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/" style={{ color: "#EEF7FF" }}>
