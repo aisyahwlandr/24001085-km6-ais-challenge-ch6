@@ -28,12 +28,14 @@ const Profile = () => {
                             ) : (
                                 <>
                                     {user?.photo && (
+                                        <div className="d-flex justify-content-center">
                                         <Image
                                             src={user?.photo}
                                             className="img-fluid"
                                             rounded
-                                            style={{ width: "50%" }}
+                                            style={{ width: "50%", textAlign: "center" }}
                                         />
+                                        </div>
                                     )}
 
                                     <div className={user?.photo && "mt-4"}>
